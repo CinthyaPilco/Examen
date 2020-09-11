@@ -2,14 +2,14 @@
 
 function imprimir() {
 	document.getElementById("contra").value;
-	message = new Paho.MQTT.Message("misma" +contra);
+	message = new Paho.MQTT.Message("misma " +contra);
     message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
     client.send(message);
   
 }
 function nuevac(){	
 	document.getElementById("contra").value;
-	message = new Paho.MQTT.Message("nueva" +contra);
+	message = new Paho.MQTT.Message("nueva " +contra);
     message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
     client.send(message);
 }
