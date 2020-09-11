@@ -1,15 +1,17 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function LED1_On() {
-	alert("led on");
-	console.log("led on");
-	document.getElementById("sensor").innerHTML="led on";
+function imprimir() {
+	document.getElementById("contra").value;
+	message = new Paho.MQTT.Message("misma" +contra);
+    message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
+    client.send(message);
   
 }
-function LED1_Off(){	
-	alert("led off");
-	console.log("led off");
-	document.getElementById("sensor").innerHTML="led off";
+function nuevac(){	
+	document.getElementById("contra").value;
+	message = new Paho.MQTT.Message("nueva" +contra);
+    message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
+    client.send(message);
 }
 
 
@@ -41,9 +43,9 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("lfrenteriax@hotmail.com/servidor");
+    client.subscribe("cinthyaanabel14@hotmail.com/servidor");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "lfrenteriax@hotmail.com/raspberry";
+    message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
     client.send(message);
 	
   }
