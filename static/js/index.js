@@ -1,15 +1,16 @@
 //https://www.eclipse.org/paho/clients/js/
 
 function imprimir() {
-	document.getElementById("contra").value;
-	message = new Paho.MQTT.Message("misma " +contra);
+	X=document.getElementById("contra").value;
+	console.log(X)
+	message = new Paho.MQTT.Message("misma" +X);
     message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
   
 }
 function nuevac(){	
-	document.getElementById("contra").value;
-	message = new Paho.MQTT.Message("nueva " +contra);
+	X=document.getElementById("contra").value;
+	message = new Paho.MQTT.Message("nueva " +X);
     message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
 }
