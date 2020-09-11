@@ -10,6 +10,7 @@ function imprimir() {
 }
 function nuevac(){	
 	X=document.getElementById("contra").value;
+	console.log(X)
 	message = new Paho.MQTT.Message("nueva " +X);
     message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
