@@ -3,14 +3,14 @@
 function imprimir() {
 	document.getElementById("contra").value;
 	message = new Paho.MQTT.Message("misma " +contra);
-    message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
+    message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
   
 }
 function nuevac(){	
 	document.getElementById("contra").value;
 	message = new Paho.MQTT.Message("nueva " +contra);
-    message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
+    message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
 }
 
@@ -29,7 +29,7 @@ function nuevac(){
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "cinthyaanabel14@hotmail.com",
+    userName: "cinthyaanabel14@gmail.com",
     password: "embebidos1",
     onSuccess:onConnect,
     onFailure:doFail
@@ -43,9 +43,9 @@ function nuevac(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("cinthyaanabel14@hotmail.com/servidor");
+    client.subscribe("cinthyaanabel14@gmail.com/servidor");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "cinthyaanabel14@hotmail.com/raspberry";
+    message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
 	
   }
@@ -64,6 +64,6 @@ function nuevac(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
+    console.log(message.payloadString);
   }
   
